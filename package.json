@@ -1,21 +1,21 @@
 {
-  "name": "docgen",
-  "version": "1.0.0",
-  "description": "Documentation generator for polar.js",
-  "main": "src/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "bin": {
-		"docgen": "src/index.js"
-	},
-  "keywords": [
-    "polar",
-    "docs"
-  ],
-  "author": "Harry Ickeringill",
-  "license": "ISC",
-  "devDependencies": {
-    "typedoc": "^0.15.0"
-  }
+    "name": "docgen",
+    "version": "1.0.0",
+    "description": "Documentation generator for polar.js",
+    "main": "src/index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "bin": {
+        "docgen": "src/index.js"
+    },
+    "keywords": [
+        "polar",
+        "docs"
+    ],
+    "author": "Harry Ickeringill",
+    "license": "ISC",
+    "devDependencies": {
+        "typedoc": "^0.15.0"
+    }
 }
