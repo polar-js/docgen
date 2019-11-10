@@ -9,10 +9,8 @@ const app = new TypeDoc.Application({
     experimentalDecorators: true
 });
 
-module.exports = = () => {
-    const project = app.convert(app.expandInputFiles(['src']));
-    console.log(project);
+const project = app.convert(app.expandInputFiles(['src']));
+console.log(project);
 
-    const project2 = app.convert(app.expandInputFiles([dir + '/src']));
-    console.log(project2);
-}
+const project2 = app.convert(app.expandInputFiles([dir + '/src']));
+console.log(project2);
