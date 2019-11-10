@@ -8,7 +8,7 @@ const app = new TypeDoc.Application({
 	mode:   'file',
 	target: 'es6',
 	module: 'commonjs',
-	tsconfig: `${process.cwd()}/tsconfig.json`,
+	tsconfig: 'tsconfig.json',
 	experimentalDecorators: true,
 	categorizeByGroup: false
 });
@@ -17,4 +17,4 @@ const project = app.convert(app.expandInputFiles(['src']));
 const json = app.serializer.projectToObject(project);
 
 const docs = new Documentation(json);
-fs.writeFileSync('docs/docs.json', JSON.stringify(docs.serialize()));
+fs.writeFileSync('docs.json', JSON.stringify(docs.serialize()));
