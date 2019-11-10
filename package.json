@@ -15,7 +15,7 @@
     ],
     "author": "Harry Ickeringill",
     "license": "ISC",
-    "devDependencies": {
+    "dependencies": {
         "typedoc": "^0.15.0"
     }
 }
