@@ -8,7 +8,7 @@ const app = new TypeDoc.Application({
 	mode:   'file',
 	target: 'es6',
 	module: 'commonjs',
-	tsconfig: 'tsconfig.json',
+	tsconfig: `${process.cwd()}/tsconfig.json`,
 	experimentalDecorators: true,
 	categorizeByGroup: false
 });
