@@ -1,6 +1,6 @@
 const DocumentationItem = require('./Item.js');
 
-class DocumentationProperty extends DocumentationItem{
+class DocumentationParameter extends DocumentationItem {
 	constructor(parent, data) {
 		super(parent, data);
 
@@ -18,4 +18,4 @@ class DocumentationProperty extends DocumentationItem{
 	}
 }
 
-module.exports = DocumentationProperty;
+module.exports = DocumentationParameter;

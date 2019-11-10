@@ -3,6 +3,9 @@
     "version": "1.0.0",
     "description": "Documentation generator for polar.js",
     "main": "src/index.js",
+    "engines": {
+        "node": ">=8.0.0"
+    },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },

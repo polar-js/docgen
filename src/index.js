@@ -1,18 +1,20 @@
 #!/usr/bin/env node
-
-console.log('abc')
 const TypeDoc = require('typedoc');
-const dir = process.cwd();
+const fs = require('fs');
+
+const Documentation = require('./Documentation.js');
 
 const app = new TypeDoc.Application({
-    mode:   'Modules',
-    target: 'ES5',
-    module: 'CommonJS',
-    experimentalDecorators: true
+	mode:   'file',
+	target: 'es6',
+	module: 'commonjs',
+	tsconfig: 'tsconfig.json',
+	experimentalDecorators: true,
+	categorizeByGroup: false
 });
 
 const project = app.convert(app.expandInputFiles(['src']));
-console.log(project);
+const json = app.serializer.projectToObject(project);
 
-const project2 = app.convert(app.expandInputFiles([dir + '/src']));
-console.log(project2);
+const docs = new Documentation(json);
+fs.writeFileSync('docs/docs.json', JSON.stringify(docs.serialize()));
