@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 console.log('abc')
 const TypeDoc = require('typedoc');
 const dir = process.cwd();
