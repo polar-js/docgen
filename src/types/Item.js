@@ -30,6 +30,10 @@ class DocumentedItem {
 			sources: this.sources
 		}, ...this.serialize() };
 	}
+
+	toArray(attribute) {
+		return attribute ? attribute.map(p => p.serializer()) : []
+	};
 }
 
 module.exports = DocumentedItem;

@@ -45,9 +45,9 @@ class DocumentationClass extends DocumentationItem {
 	serialize() {
 		return {
 			extends: this.extends ? this.extends.name : undefined,
-			properties: this.properties.size > 0 ? Array.from(this.properties.values()).map(p => p.serializer()) : undefined,
-			methods: this.methods.size > 0 ? Array.from(this.methods.values()).map(p => p.serializer()) : undefined,
-			parameters: this.parameters ? this.parameters.map(p => p.serializer()) : undefined,
+			properties: this.toArray(this.properties),
+			methods: this.toArray(this.methods),
+			parameters: this.toArray(this.parameters)
 		};
 	}
 }

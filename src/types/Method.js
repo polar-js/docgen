@@ -23,7 +23,7 @@ class DocumentationMethod extends DocumentationItem {
 	serialize() {
 		return {
 			returns: this.returns,
-			parameters: this.parameters.size > 0 ? Array.from(this.parameters.values()).map(p => p.serializer()) : undefined
+			parameters: this.toArray(this.parameters)
 		};
 	}
 }
