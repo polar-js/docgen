@@ -8,7 +8,8 @@ class DocumentationParameter extends DocumentationItem {
 	}
 
 	parse(data) {
-		this.type = data.type.name;
+		console.log(data)
+		//this.type = data.type.name;
 	}
 
 	serialize() {
