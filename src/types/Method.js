@@ -24,7 +24,7 @@ class DocumentationMethod extends DocumentationItem {
 		console.log(this.parameters)
 		return {
 			returns: this.returns,
-			parameters: this.toArray(this.parameters)
+			parameters: this.parameters.size > 0 ? Array.from(this.parameters.values()).map(p => p.serializer()) : []
 		};
 	}
 }
