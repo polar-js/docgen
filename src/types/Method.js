@@ -12,9 +12,7 @@ class DocumentationMethod extends DocumentationItem {
 	parse(data) {
 		this.returns = data.signatures[0].type;
 
-		console.log(data)
-
-		if (data.parameters) data.parameters
+		if (data.signatures[0].parameters) data.signatures[0].parameters
 			.forEach(p => this.addParameter(p));
 	}
 
