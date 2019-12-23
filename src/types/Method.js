@@ -21,6 +21,7 @@ class DocumentationMethod extends DocumentationItem {
 	}
 
 	serialize() {
+		console.log(this.parameters)
 		return {
 			returns: this.returns,
 			parameters: this.toArray(this.parameters)

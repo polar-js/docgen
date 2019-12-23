@@ -32,7 +32,7 @@ class DocumentedItem {
 	}
 
 	toArray(attribute) {
-		console.log(attribute)
+		return attribute
 		return attribute ? attribute.map(p => p.serializer()) : []
 	};
 }
