@@ -21,7 +21,6 @@ class DocumentationMethod extends DocumentationItem {
 	}
 
 	serialize() {
-		console.log(this.parameters)
 		return {
 			returns: this.returns,
 			parameters: this.parameters.size > 0 ? Array.from(this.parameters.values()).map(p => p.serializer()) : []
