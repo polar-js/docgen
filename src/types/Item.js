@@ -22,6 +22,14 @@ class DocumentedItem {
 		return sources ? sources[0] : undefined;
 	}
 
+	parseType(type) {
+		if (type.type !== 'array') {
+			return  { name: type.name || type.value, array: false }
+		} else {
+			return { name: type.elementType.name, arrayOf: true }
+		}
+	}
+
 	serializer() {
 		return {...{
 			name: this.name,
