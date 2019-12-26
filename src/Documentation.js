@@ -1,5 +1,5 @@
 const DocumentationClass = require('./types/Class.js');
-const { version } = {version: '1.0.0'};//require('../package.json');
+const { version } = require('../package.json');
 
 class Documentation {
 	constructor(data) {
