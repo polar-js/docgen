@@ -8,14 +8,16 @@ class DocumentationParameter extends DocumentationItem {
 	}
 
 	parse(data) {
-		console.log(data)
-		//this.type = data.type.name;
+		this.type = data.type.name;
+		this.defaultValue = data.defaultValue;
 	}
 
 	serialize() {
-		return {
-			type: this.type
-		};
+		const data = {
+			type: this.type,
+		}
+		if (this.defaultValue) data.defaultValue = this.defaultValue;
+		return data;
 	}
 }
 

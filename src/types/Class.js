@@ -1,7 +1,7 @@
 const DocumentationItem = require('./Item.js');
 const DocumentationProperty = require('./Property.js');
 const DocumentationMethod = require('./Method.js');
-const DocumenationParameter = require('./Parameter.js');
+const DocumentationParameter = require('./Parameter.js');
 
 class DocumentationClass extends DocumentationItem {
 	constructor(parent, data) {
@@ -30,7 +30,7 @@ class DocumentationClass extends DocumentationItem {
 		if (constructor) {
 			const parameters = constructor.signatures[0].parameters;
 			if (parameters) this.parameters = constructor.signatures[0].parameters
-				.map(p => new DocumenationParameter(p.name, p));
+				.map(p => new DocumentationParameter(this, p));
 		}
 	}
 
