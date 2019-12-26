@@ -24,7 +24,7 @@ class DocumentedItem {
 
 	parseType(type) {
 		if (type.type !== 'array') {
-			return  { name: type.name || type.value, array: false }
+			return  { name: type.name || type.value, arrayOf: false }
 		} else {
 			return { name: type.elementType.name, arrayOf: true }
 		}
