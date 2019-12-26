@@ -15,7 +15,7 @@ const app = new TypeDoc.Application({
 
 const project = app.convert(app.expandInputFiles(['src']));
 const json = app.serializer.projectToObject(project);
-fs.writeFileSync('ugly_docs.json', JSON.stringify(docs.serialize()));
+fs.writeFileSync('ugly_docs.json', JSON.stringify(json));
 
 
 const docs = new Documentation(json);
