@@ -8,7 +8,7 @@ class DocumentationParameter extends DocumentationItem {
 	}
 
 	parse(data) {
-		this.type = data.type.name;
+		this.type = this.parseType(data.type);
 		this.defaultValue = data.defaultValue;
 	}
 

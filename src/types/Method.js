@@ -13,7 +13,7 @@ class DocumentationMethod extends DocumentationItem {
 		if (data.signatures[0].comment) {
 			this.description = data.signatures[0].comment.shortText;
 		}
-		this.returns = data.signatures[0].type;
+		this.returns = this.parseType(data.signatures[0].type)
 
 		if (data.signatures[0].parameters) data.signatures[0].parameters
 			.forEach(p => this.addParameter(p));
